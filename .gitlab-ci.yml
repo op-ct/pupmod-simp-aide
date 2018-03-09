@@ -183,7 +183,7 @@ pup5.latest-unit:
 
 # Acceptance tests
 # ==============================================================================
-default:
+default-acceptance:
   stage: acceptance
   tags:
     - beaker
@@ -192,7 +192,7 @@ default:
   script:
     - bundle exec rake beaker:suites[default]
 
-default-puppet5:
+puppet5-acceptance:
   stage: acceptance
   tags:
     - beaker
@@ -202,7 +202,7 @@ default-puppet5:
     - bundle exec rake beaker:suites[default,puppet5]
   allow_failure: true
 
-default-oracle:
+oel-acceptance:
   stage: acceptance
   tags:
     - beaker
